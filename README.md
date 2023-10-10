@@ -94,8 +94,8 @@ while (index < 10):
   <img width="1200 height="600" src="./scr/nexus-8_102.png">
 </p>
 
-4. В ответе пришлите файл `maven-metadata.xml` для этого артефекта.
-**[maven-metadata.xml] (./maven-metadata.xml)**
+4. В ответе пришлите файл `maven-metadata.xml` для этого артефекта.\
+**[maven-metadata.xml](./maven-metadata.xml)**
 
 ### Знакомство с Maven
 
@@ -124,8 +124,8 @@ while (index < 10):
   <img width="1200 height="600" src="./scr/mvn-repository.png">
 </p>
 
-4. В ответе пришлите исправленный файл `pom.xml`.
-**[pom.xml] (./mvn/pom.xml)**
+4. В ответе пришлите исправленный файл `pom.xml`.\
+**[pom.xml](./mvn/pom.xml)**
 
 ---
 
