@@ -7,7 +7,7 @@
 
 **VM в Yandex Cloud разворачиваются по средствам terraform, создаётся динамический hosts-файл:**
 <p align="center">
-  <img width="1200 height="600" src="./hosts.png">
+  <img width="1200 height="600" src="./scr/hosts.png">
 </p>
 
 3. Добавьте в [files](./infrastructure/files/) файл со своим публичным ключом (id_rsa.pub). Если ключ называется иначе — найдите таску в плейбуке, которая использует id_rsa.pub имя, и исправьте на своё.
@@ -15,13 +15,13 @@
 5. Проверьте готовность SonarQube через [браузер](http://localhost:9000).
 6. Зайдите под admin\admin, поменяйте пароль на свой.
 <p align="center">
-  <img width="1200 height="600" src="./sonarqube.png">
+  <img width="1200 height="600" src="./scr/sonarqube.png">
 </p>
 
 7. Проверьте готовность Nexus через [бразуер](http://localhost:8081).
 8. Подключитесь под admin\admin123, поменяйте пароль, сохраните анонимный доступ.
 <p align="center">
-  <img width="1200 height="600" src="./nexus.png">
+  <img width="1200 height="600" src="./scr/nexus.png">
 </p>
 
 ## Знакомоство с SonarQube
@@ -33,20 +33,20 @@
 3. Сделайте так, чтобы binary был доступен через вызов в shell (или поменяйте переменную PATH, или любой другой, удобный вам способ).
 4. Проверьте `sonar-scanner --version`.
 <p align="center">
-  <img width="1200 height="600" src="./sonar-scanner.png">
+  <img width="1200 height="600" src="./scr/sonar-scanner.png">
 </p>
 
 5. Запустите анализатор против кода из директории [example](./example) с дополнительным ключом `-Dsonar.coverage.exclusions=fail.py`.
 <p align="center">
-  <img width="1200 height="600" src="./sonar-scanner1.png">
+  <img width="1200 height="600" src="./scr/sonar-scanner1.png">
 </p>
 <p align="center">
-  <img width="1200 height="600" src="./sonar-scanner2.png">
+  <img width="1200 height="600" src="./scr/sonar-scanner2.png">
 </p>
 
 6. Посмотрите результат в интерфейсе.
 <p align="center">
-  <img width="1200 height="600" src="./sonar-scanner3.png">
+  <img width="1200 height="600" src="./scr/sonar-scanner3.png">
 </p>
 
 7. Исправьте ошибки, которые он выявил, включая warnings.
@@ -68,7 +68,7 @@ while (index < 10):
 8. Запустите анализатор повторно — проверьте, что QG пройдены успешно.
 9.  Сделайте скриншот успешного прохождения анализа, приложите к решению ДЗ.
 <p align="center">
-  <img width="1200 height="600" src="./sonar-scanner4.png">
+  <img width="1200 height="600" src="./scr/sonar-scanner4.png">
 </p>
 
 ## Знакомство с Nexus
@@ -84,14 +84,14 @@ while (index < 10):
  *    type: tar.gz.
 
 <p align="center">
-  <img width="1200 height="600" src="./nexus-8_282.png">
+  <img width="1200 height="600" src="./scr/nexus-8_282.png">
 </p>
 
 2. В него же загрузите такой же артефакт, но с version: 8_102.
 3. Проверьте, что все файлы загрузились успешно.
 
 <p align="center">
-  <img width="1200 height="600" src="./nexus-8_102.png">
+  <img width="1200 height="600" src="./scr/nexus-8_102.png">
 </p>
 
 4. В ответе пришлите файл `maven-metadata.xml` для этого артефекта.
@@ -106,7 +106,7 @@ while (index < 10):
 3. Удалите из `apache-maven-<version>/conf/settings.xml` упоминание о правиле, отвергающем HTTP- соединение — раздел mirrors —> id: my-repository-http-unblocker.
 4. Проверьте `mvn --version`.
 <p align="center">
-  <img width="1200 height="600" src="./mvn-version.png">
+  <img width="1200 height="600" src="./scr/mvn-version.png">
 </p>
 
 5. Заберите директорию [mvn](./mvn) с pom.
@@ -116,12 +116,12 @@ while (index < 10):
 1. Поменяйте в `pom.xml` блок с зависимостями под ваш артефакт из первого пункта задания для Nexus (java с версией 8_282).
 2. Запустите команду `mvn package` в директории с `pom.xml`, ожидайте успешного окончания.
 <p align="center">
-  <img width="1200 height="600" src="./mvn-package.png">
+  <img width="1200 height="600" src="./scr/mvn-package.png">
 </p>
 
 3. Проверьте директорию `~/.m2/repository/`, найдите ваш артефакт.
 <p align="center">
-  <img width="1200 height="600" src="./mvn-repository.png">
+  <img width="1200 height="600" src="./scr/mvn-repository.png">
 </p>
 
 4. В ответе пришлите исправленный файл `pom.xml`.
